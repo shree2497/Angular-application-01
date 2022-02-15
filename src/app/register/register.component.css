@@ -1,0 +1,29 @@
+form{
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    padding: 30px;
+    font-size: 20px;
+    background-color: rgb(209, 207, 207);
+}
+
+button[type=submit]{
+    margin-top: 10px;
+    background-color: rgb(175, 171, 171);
+    color:black;
+    border-radius: 4px;
+    
+}
+button[type=submit]:hover{
+    background-color:rgb(170, 160, 160) ;
+}
+ 
+body{
+    background-image: url("https://as1.ftcdn.net/v2/jpg/04/72/45/36/1000_F_472453668_9Hx98fsP9B59IdsRPekLCEkTLgRUuQfR.jpg");
+    background-size: 100%;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    
+}

@@ -1,0 +1,22 @@
+h3{
+    text-align: left;
+    margin-left: 20px;
+}
+p{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+body{
+    background-image:url("https://image.shutterstock.com/z/stock-vector-transparent-shadow-effects-vector-with-shadow-overlays-on-transparent-background-vector-of-1646967517.jpg");
+    background-size: cover;
+background-position: center;
+    position: fixed;
+
+    height: 100vh;
+    
+}
+p{
+    font-weight: bold;
+}

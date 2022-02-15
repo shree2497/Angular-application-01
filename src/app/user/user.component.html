@@ -1,0 +1,144 @@
+<body>
+<div class="container">
+    <div class="row">
+      
+      <div class="col-xs-12 ">
+        <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+          <h2>User Details Form</h2>
+          <div class="form-group">
+            <label for="title">Fullname</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              required
+              ngModel
+              name="title"
+            />
+          </div>
+          <div class="form-group">
+            <label for="content">Lastname</label>
+            <input
+            type="text"
+              class="form-control"
+              id="content"
+              required
+              ngModel
+              name="content"
+          />
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+            type="number"
+              class="form-control"
+              id="age"
+              required
+              ngModel
+              name="age"
+          />
+          </div>
+          <div class="form-group">
+            <label for="school">Education</label>
+            <input
+            type="text"
+              class="form-control"
+              id="school"
+              required
+              ngModel
+              name="school"
+          />
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input
+            type="text"
+              class="form-control"
+              id="city"
+              required
+              ngModel
+              name="city"
+          />
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <input
+            type="text"
+              class="form-control"
+              id="state"
+              required
+              ngModel
+              name="state"
+          />
+          </div>
+          <div class="form-group">
+            <label for="country">Country</label>
+            <input
+            type="text"
+              class="form-control"
+              id="country"
+              required
+              ngModel
+              name="country"
+          />
+          </div>
+          <div class="form-group">
+            <label for="skills">Skills</label>
+            <textarea
+            type="textarea"
+              class="form-control"
+              id="skills"
+              required
+              ngModel
+              name="skills"
+            >
+          </textarea>
+          </div>
+          <button
+            type="submit"
+            [disabled]="!postForm.valid"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-xs-12 style-center " >
+        <button (click)="onFetchPosts()">
+          Fetch users
+        </button>
+        |
+        <button
+          [disabled]="loadedPosts.length < 1"
+          (click)="onClearPosts()"
+        >
+          Clear users
+        </button>|
+         <button  (click)="updatepost()"> Modify</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 style-center">
+        <p *ngIf="loadedPosts.length < 1 && !isFetching">No posts available!</p>
+        <ul class="list-group" *ngIf="loadedPosts.length >= 1 && !isFetching">
+          <li class="list-group-item" *ngFor="let post of loadedPosts">
+  <h3>{{post.title}}</h3>
+  <p>{{post.content}}</p>
+  <p>{{post.age}}</p>
+  <p>{{post.school}}</p>
+  <p>{{post.city}}</p>
+  <p>{{post.state}}</p>
+  <p>{{post.country}}</p>
+  <p>{{post.skills}}</p>
+  <p>{{post.id}}</p>
+  
+          </li>
+        </ul>
+        <p *ngIf="isFetching">Loading...</p>
+      </div>
+    </div>
+  </div>
+</body>
+  
